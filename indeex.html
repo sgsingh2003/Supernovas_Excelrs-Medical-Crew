@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>excelrs-medical-crew</title>
+</head>
+<body>
+  <div class="app-container">
+  <aside class="sidebar">
+    <h3>Case History</h3>
+    <div class="history-item">Chest Pain - 65M</div>
+    <div class="history-item">Trauma - Scene A</div>
+  </aside>
+
+  <main class="main-content">
+    <div class="medical-card">
+      <header>
+        <h2>excelrs-medical-crew</h2>
+        <span class="status-badge">AI Active</span>
+      </header>
+
+      <div class="input-group">
+        <label>Initial Problem</label>
+        <textarea placeholder="Describe the medical emergency..."></textarea>
+      </div>
+
+      <div class="input-group">
+        <label>Additional Details</label>
+        <textarea placeholder="Vitals,current health conditions, and more..."></textarea>
+      </div>
+
+      <button class="analyze-btn">Analyze & Generate Protocol</button>
+
+      <div class="result-box">
+        <h3>AI Analysis Result</h3>
+        <p id="result-text">Results will appear here...</p>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
