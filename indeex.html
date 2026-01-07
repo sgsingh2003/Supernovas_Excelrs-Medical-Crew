@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excelrs Medical Crew</title>
   <link rel="stylesheet" href="style.css">
-  <title>excelrs-medical-crew</title>
 </head>
 <body>
-  <div class="app-container">
+
+<div class="app-container">
+
+  <!-- Sidebar -->
   <aside class="sidebar">
-    <h3>Case History</h3>
-    <div class="history-item">Chest Pain - 65M</div>
-    <div class="history-item">Trauma - Scene A</div>
+    <h3 class="sidebar-title">Case History</h3>
+
+    <div class="history-item active">Case #102: Chest Pain – 65M</div>
+    <div class="history-item">Case #101: Trauma – Scene A</div>
+    <div class="history-item">Case #100: Pediatric Fever</div>
   </aside>
 
+  <!-- Main Content -->
   <main class="main-content">
-    <div class="medical-card">
-      <header>
-        <h2>excelrs-medical-crew</h2>
-        <span class="status-badge">AI Active</span>
-      </header>
 
+    <div class="medical-card">
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="title">
+          🩺 <span>Excelrs-Medical-Crew</span>
+        </div>
+        <span class="status-badge">AI Active</span>
+      </div>
+
+      <!-- Input Section -->
       <div class="input-group">
         <label>Initial Problem</label>
-        <textarea placeholder="Describe the medical emergency..."></textarea>
+        <textarea 
+             id="initialProblem"
+             placeholder="Unconscious patient found, approx 40 years old...">
+        </textarea>
       </div>
 
       <div class="input-group">
         <label>Additional Details</label>
-        <textarea placeholder="Vitals,current health conditions, and more..."></textarea>
+        <textarea 
+            id="additionalDetails"
+            placeholder="No pulse, no breathing, pale, cold to touch...">
+         </textarea>
       </div>
 
-      <button class="analyze-btn">Analyze & Generate Protocol</button>
+      <button 
+       class="analyze-btn"
+      onclick="analyzeCase()">
+      Analyze & Generate Protocol
+       </button>
 
+      <!-- Result Section -->
       <div class="result-box">
         <h3>AI Analysis Result</h3>
-        <p id="result-text">Results will appear here...</p>
+         <p id="resultContent">Result will appear here...</p></div>
       </div>
+        
+       
+      </div>
+
     </div>
+
   </main>
+
 </div>
+ <script scr="script.js"></script>
 </body>
 </html>
