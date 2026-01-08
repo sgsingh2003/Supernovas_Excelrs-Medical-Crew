@@ -1,0 +1,1 @@
+As your symptoms include a common cold with a high fever, it is vital that you consult a medical professional to ensure proper treatment. In the meantime, monitor your symptoms, stay hydrated, and rest. A consultation has been booked for you via Practo -- a doctor will contact you soon.
