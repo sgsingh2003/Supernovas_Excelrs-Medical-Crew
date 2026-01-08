@@ -31,4 +31,4 @@ Deployment on web server
 This project serves as a foundational step in learning web application development and UI design. It is scalable and can be enhanced with additional features in future iterations.
 checkpoint 1: ui simple sceleton and architecture was uploded
 checkpoint 2 a: code of the frontend and basic backend code was uploded
-checkpoint 3 a: full backend code and frontend code is uploded in the folder name deckthon
+checkpoint 2 b: full backend code and frontend code is uploded in the folder name deckthon
