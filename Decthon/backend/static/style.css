@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f3f6fb;
+  color: #1a1a1a;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 270px;
+  background: #141922;
+  padding: 24px;
+  color: white;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.history-item {
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #1f2633;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.history-item.active {
+  background: #2d5bff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.medical-card {
+  width: 100%;
+  max-width: 720px;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.status-badge {
+  background: #e6f0ff;
+  color: #2d5bff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1.5px solid #d1d5db;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2d5bff;
+}
+
+.analyze-btn {
+  width: 100%;
+  background: #2d5bff;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  background: #1f46d8;
+}
+
+.result-box {
+  margin-top: 30px;
+  padding: 22px;
+  background: #f9fafb;
+  border-left: 5px solid #22c55e;
+  border-radius: 10px;
+}
+
+pre {
+  white-space: pre-wrap;
+}

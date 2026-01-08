@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excelrs Medical Crew</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3 class="sidebar-title">Case History</h3>
+    <div class="history-item active">Case #102: Chest Pain – 65M</div>
+    <div class="history-item">Case #101: Trauma – Scene A</div>
+    <div class="history-item">Case #100: Pediatric Fever</div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="medical-card">
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="title">🩺 Excelrs-Medical-Crew</div>
+        <span class="status-badge">AI Active</span>
+      </div>
+
+      <!-- Input -->
+      <div class="input-group">
+        <label>Initial Problem</label>
+        <textarea id="initialProblem" placeholder="Unconscious patient found..."></textarea>
+      </div>
+
+      <div class="input-group">
+        <label>Additional Details</label>
+        <textarea id="additionalDetails" placeholder="No pulse, no breathing..."></textarea>
+      </div>
+
+      <button class="analyze-btn" onclick="analyzeCase()">
+        Analyze & Generate Protocol
+      </button>
+
+      <!-- Result -->
+      <div class="result-box">
+        <h3>AI Analysis Result</h3>
+        <pre id="resultContent">Waiting for analysis...</pre>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
