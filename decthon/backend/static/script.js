@@ -1,26 +1,32 @@
 function analyzeCase() {
-    const initialProblem = document.getElementById("initialProblem").value;
-    const additionalDetails = document.getElementById("additionalDetails").value;
-    const resultBox = document.getElementById("resultContent");
+  const initialProblem = document.getElementById("initialProblem").value;
+  const additionalDetails = document.getElementById("additionalDetails").value;
+  const resultBox = document.getElementById("resultContent");
 
-    resultBox.innerHTML = "⏳ Analyzing case...";
+  resultBox.innerText = "⏳ Analyzing case...";
 
-    fetch("/analyze", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            initial_problem: initialProblem,
-            additional_details: additionalDetails
-        })
+  fetch("/analyze", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      problem: initialProblem + ". " + additionalDetails
     })
+  })
     .then(res => res.json())
     .then(data => {
-        resultBox.innerHTML = data.result;
+      if (data.error) {
+        resultBox.innerText = data.error;
+      } else {
+        resultBox.innerText =
+          "STATUS:\n" + data.status + "\n\n" +
+          "AGENT STEPS:\n" + data.agent_steps.join("\n") + "\n\n" +
+          "MEDICAL REPORT:\n" + data.medical_report;
+      }
     })
     .catch(err => {
-        console.error(err);
-        resultBox.innerHTML = "❌ Error connecting to server";
+      console.error(err);
+      resultBox.innerText = "❌ Server error";
     });
 }
